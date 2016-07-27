@@ -1,9 +1,8 @@
-# electron-storage
+# ya-storage
 
-> simple storage managing module for electron
+> simple JSON storage managing module
 
-Electron saves data in app.getPath("appData") folder, which is different in every os.
-```electron-storage``` gives simple methods to get and set json files to this directory.
+```ya-storage``` gives simple methods to get and set json files to path in file system.
 
 * Creates subdirectories if needed - that means you can write ```movies/StarWars.json``` as path, a movies folder will be created and a StarWars.json file inside.
 * Supports callbacks and promises.
@@ -13,12 +12,12 @@ Electron saves data in app.getPath("appData") folder, which is different in ever
 ## Installation
 
 ```
-$ npm install --save electron-storage
+$ npm install --save ya-storage
 ```
 ### usage
 ```js
 
-const storage = require('electron-storage');
+const storage = require('ya-storage');
 ```
 ### API
 

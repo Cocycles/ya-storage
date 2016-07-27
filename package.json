@@ -1,20 +1,19 @@
 {
-  "name": "electron-storage",
+  "name": "ya-storage",
   "version": "1.0.3",
-  "description": "module for managing storage in electron applications",
+  "description": "yet another module for managing json storage",
   "main": "dist/index.js",
   "scripts": {
-    "test": "gulp; electron-mocha --recursive tests -R spec && electron-mocha --renderer --recursive tests -R spec",
+    "test": "gulp; mocha --recursive tests -R spec",
     "lint": "eslint ./src/**/*.js; exit 0",
     "build": "gulp"
   },
-  "homepage": "https://github.com/ran-y/electron-storage",
+  "homepage": "https://github.com/ran-y/ya-storage",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ran-y/electron-storage.git"
+    "url": "git@github.com:ran-y/ya-storage.git"
   },
   "keywords": [
-    "electron",
     "storage",
     "json",
     "get",
@@ -26,14 +25,12 @@
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
     "chai": "^3.5.0",
-    "electron-mocha": "^2.2.1",
-    "electron-prebuilt": "^1.2.5",
     "eslint": "^3.0.0",
     "eslint-config-airbnb-base": "^3.0.1",
     "eslint-plugin-import": "^1.10.2",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
-    "proxyquire": "^1.7.10"
+    "mocha": "^2.5.3"
   },
   "dependencies": {
     "mkdirp": "^0.5.1",

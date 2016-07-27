@@ -4,10 +4,6 @@
 /* eslint no-param-reassign: 0 */
 /* eslint import/no-unresolved: 0 */
 
-var electron = require('electron');
-var app = electron.app || electron.remote.app;
-var userData = app.getPath('userData');
-
 function isFunction(functionToCheck) {
   var getType = {};
   return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
@@ -39,10 +35,6 @@ function tryStringifyJson(objectJson) {
   return string;
 }
 
-function getElectronFullPath(path) {
-  return userData + '/' + path;
-}
-
 function addDotJsonIfNeeded(path) {
   if (path.substring(path.length - 5, path.length) === '.json') {
     return path;
@@ -52,7 +44,7 @@ function addDotJsonIfNeeded(path) {
 }
 
 function processPath(path) {
-  return getElectronFullPath(addDotJsonIfNeeded(path));
+  return addDotJsonIfNeeded(path);
 }
 
 module.exports = {
