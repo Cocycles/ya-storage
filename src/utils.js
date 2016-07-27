@@ -34,7 +34,8 @@ function tryStringifyJson(objectJson) {
 }
 
 function addDotJsonIfNeeded(path) {
-  if (path.substring(path.length - 5, path.length) === '.json') {
+  if (path.substring(path.length - 5, path.length) === '.json' ||
+  path.charAt(path.length - 1) === '/') {
     return path;
   }
 

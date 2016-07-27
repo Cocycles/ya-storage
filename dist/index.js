@@ -165,9 +165,7 @@ function isPathExists(fileOrDirPath, cb) {
  * @param  {func} cb - a callback function
  */
 function _remove(fileOrDirPath, cb) {
-  var fullPath = (0, _utils.processPath)(fileOrDirPath);
-
-  return (0, _rimraf2.default)(fullPath, cb);
+  return (0, _rimraf2.default)(fileOrDirPath, cb);
 }
 
 /**
