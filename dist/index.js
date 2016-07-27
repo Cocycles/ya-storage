@@ -130,9 +130,7 @@ function set(filePath, data, cb) {
  * @param  {func} cb - a callback function
  */
 function _isPathExists(fileOrDirPath, cb) {
-  var fullPath = (0, _utils.processPath)(fileOrDirPath);
-
-  return _fs2.default.exists(fullPath, function (exists) {
+  return _fs2.default.exists(fileOrDirPath, function (exists) {
     if (exists) return cb(true);
     return cb(false);
   });

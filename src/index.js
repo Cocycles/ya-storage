@@ -119,9 +119,7 @@ function set(filePath, data, cb) {
  * @param  {func} cb - a callback function
  */
 function _isPathExists(fileOrDirPath, cb) {
-  const fullPath = processPath(fileOrDirPath);
-
-  return fs.exists(fullPath, (exists) => {
+  return fs.exists(fileOrDirPath, (exists) => {
     if (exists) return cb(true);
     return cb(false);
   });
