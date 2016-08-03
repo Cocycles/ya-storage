@@ -3,7 +3,6 @@
 /* eslint object-shorthand: 0 */
 /* eslint no-param-reassign: 0 */
 /* eslint import/no-unresolved: 0 */
-
 function isFunction(functionToCheck) {
   var getType = {};
   return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
